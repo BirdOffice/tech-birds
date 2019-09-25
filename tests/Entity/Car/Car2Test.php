@@ -7,19 +7,19 @@ namespace App\Tests\Entity\Car;
 use App\Entity\Car;
 use PHPUnit\Framework\TestCase;
 
-class CarTest2 extends TestCase
+class Car2Test extends TestCase
 {
-    public function testCheckPriceTtcIsFalse()
+    /**
+     * @dataProvider provider
+     */
+    public function testAdd($a, $b, $c)
     {
-        // Creation d'une nouvelle voiture
-        $car = new Car();
-        $car->setBrand('porsche');
-        $car->setModel('911 GT3 RS');
-        $car->setPriceTtc(200000.4);
-        $car->setPriceHT(166627);
+        $this->assertEquals($c, $a + $b);
+    }
 
-
-        // Vérification à l'aide de nôtre function et de PhpUnit si le résultat est bien celui souhaité.
-        $this->assertFalse($car->checkPriceTtc());
+    public function provider()
+    {
+        return
+            array(1, 1, 2);
     }
 }
