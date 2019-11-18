@@ -4,7 +4,6 @@
 namespace App\Tests\Entity\Car;
 
 
-use App\Entity\Car;
 use PHPUnit\Framework\TestCase;
 
 class Car2Test extends TestCase
@@ -19,7 +18,6 @@ class Car2Test extends TestCase
 
     public function provider()
     {
-        return
-            array(1, 1, 2);
+        return [1, 1, 2];
     }
 }
