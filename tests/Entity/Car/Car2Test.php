@@ -10,14 +10,19 @@ class Car2Test extends TestCase
 {
     /**
      * @dataProvider provider
+     * @param $a
+     * @param $b
+     * @param $c
      */
-    public function testAdd($a, $b, $c)
+    public function testCount($a, $b, $c): void
     {
         $this->assertEquals($c, $a + $b);
     }
 
-    public function provider()
+    public function provider(): array
     {
-        return [1, 1, 2];
+        return [
+            [1, 1, 2]
+        ];
     }
 }
